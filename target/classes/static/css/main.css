@@ -1,0 +1,9 @@
+*{
+    box-sizing: border-box;
+    /* background: rgba(0, 0, 0, .1) */
+}
+
+.main{
+    margin: auto 10%;
+    min-width: 720px;
+}

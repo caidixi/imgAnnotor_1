@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marking</title>
+    <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/normalize/8.0.0/normalize.min.css"> -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/markarea.css">
+    <link rel="stylesheet" href="css/canvas-area.css">
+    <link rel="stylesheet" href="css/descarea.css">
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-menu">
+            <ul>
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-userwrapper">
+
+        </div>
+    </div>
+    <div class="main">
+        <div id="markarea">
+            <div id="canvas-area">
+                <div id="marks-canvas-wrap"></div>
+                <script src="js/rectMark.js"></script>
+                <script src="js/polyMark.js"></script>
+                <script src="js/mark.js"></script>
+                <script src="js/Marks.js"></script>
+            </div>
+            <div id="mark-desc-table">
+                <div class="mark-desc-head">
+                    <span class="mark-desc-time">time</span>
+                    <span class="mark-desc-content">content</span>
+                </div>
+                <div id="mark-desc-wrap"></div>
+                <script src="js/description.js"></script>
+            </div>
+            <div id="marks-method-wrap"></div>
+
+            <button id="submit">提交</button>
+            <input type="text" id="input">
+            <button id="getm">获取图片</button>
+            <button id="delete">删除</button>
+            <script src="js/markController.js"></script>
+        </div>
+
+    </div>
+    <div class="footer">
+
+    </div>
+</body>
+
+</html>
