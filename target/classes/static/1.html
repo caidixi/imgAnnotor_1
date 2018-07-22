@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<input type="text">
+<button id="submit">提交</button>
+<button id="get">get</button>
+<label></label>
+<script>
+    var sbtn = $('#submit')
+    sbtn.on('click', function () {
+        var value = $('input').val()
+        $.ajax({
+            type:'POST',
+            url:'/a',
+            data:JSON.stringify({val:value}),
+            success:function(data){
+                $('label').append(data.val)
+            },
+            contentType:'application/json',
+            dataType:'json'
+        })
+    })
+
+    var gbtn = $('#get')
+    gbtn.on('click', function () {
+        $.ajax({
+            type:'GET',
+            url:'/a',
+            success:function(data){
+                console.log(data)
+            },
+            contentType:'application/json',
+            dataType:'json'
+        })
+    })
+</script>
+</body>
+</html>
